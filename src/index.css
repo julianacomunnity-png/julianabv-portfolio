@@ -1,0 +1,89 @@
+﻿@import "tailwindcss";
+
+@theme {
+--color-brand-blue: #004AAD;
+--color-brand-blue-hover: #003A88;
+--color-dark-blue: #0B1F3A;
+--color-light-blue: #EAF3FF;
+--color-soft-blue: #F5F9FF;
+--color-blue-accent: #5BA7FF;
+
+--font-display: "Space Grotesk", sans-serif;
+--font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+body {
+background-color: #FFFFFF;
+color: #0B1F3A;
+font-family: var(--font-sans);
+overflow-x: hidden;
+}
+
+/* Selección de texto */
+::selection {
+background-color: #004AAD;
+color: #FFFFFF;
+}
+
+/* Custom subtle grid background */
+.bg-grid-pattern {
+background-size: 40px 40px;
+background-image:
+linear-gradient(
+to right,
+rgba(11, 31, 58, 0.035) 1px,
+transparent 1px
+),
+linear-gradient(
+to bottom,
+rgba(11, 31, 58, 0.035) 1px,
+transparent 1px
+);
+}
+
+/* Radial azul muy sutil */
+.bg-radial-gradient {
+background:
+radial-gradient(
+circle at 50% 0%,
+rgba(0, 74, 173, 0.08) 0%,
+rgba(234, 243, 255, 0.35) 35%,
+transparent 70%
+);
+}
+
+/* Paneles claros tipo glass */
+.glass-panel {
+background: rgba(255, 255, 255, 0.82);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid rgba(11, 31, 58, 0.08);
+box-shadow: 0 10px 35px rgba(11, 31, 58, 0.06);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-track {
+background: #F5F9FF;
+}
+
+::-webkit-scrollbar-thumb {
+background: #C7D8EC;
+border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #004AAD;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+
+.no-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
